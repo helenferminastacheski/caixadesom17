@@ -11,13 +11,12 @@ const listaDeTeclas = document.querySelectorAll('.tecla');
 //chamando a função tocaSom pela item "0" da listaDeTecla
 listaDeTeclas[0].onclick = tocaSom;
 
-let contador = 0;
-while(contador < listaDeTeclas.length){
-    const efeito = listaDeTeclas[contador].classList[1]
-    const idAudio = "#som_"+efeito;
-    listaDeTeclas[contador].onclick = function?(){
-        tocaSom(Audio)
-    };
-    contador = contador + 1;
-    consoler.log(contaor);
+for(let contador = 0;contador< listaDeTeclas.length;contador++){
+    const tecla = listaDeTeclas[contador];
+    const efeito = tecla.classList[1];
+    const idAudio = `#som_${efeito}`;
+    tecla.onclik = function(){
+        tocaSom(idAudio);
+    }
 }
+    
