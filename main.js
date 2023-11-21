@@ -19,7 +19,7 @@ for(let contador = 0;contador< listaDeTeclas.length;contador++){
         tocaSom(idAudio);
     }
     tecla.okeydown = function(){ 
-        if(EventCounts.code != 'Tab'){
+        if(evento.code === 'Space'|| evento.code === 'Enter'){
             tecla.classList.add('ativa')
         }
         tecla.classList.add( 'ativa')
